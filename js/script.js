@@ -5,16 +5,16 @@ const closeBtn = document.querySelector('.modal_close');
 //grab modal
 const modal = document.querySelector('.modal');
 
-//open modal onclick
-function openModal(){
-    modal.style.display = 'block';
-}
-
-//close modal onclick
-function closeModal(){
-  modal.style.display = 'none';
+//toggleModal
+function toggleModal(){
+    if (modal.style.display === 'none') {
+        modal.style.display = 'block';
+    } else {
+        modal.style.display = 'none';
+    }
+    
 }
 
 //listner for buttons
-myBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
+myBtn.addEventListener('click', toggleModal);
+closeBtn.addEventListener('click', toggleModal);
